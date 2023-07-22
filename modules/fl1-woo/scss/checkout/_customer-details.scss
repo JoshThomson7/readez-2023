@@ -1,0 +1,257 @@
+#customer_details {
+    width: 100%;
+    background: #fff;
+    border-radius: var(--fl1-radius-md);
+    padding: 32px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
+
+    h3 {
+        font-size: 24px;
+        color: var(--fl1-text);
+        font-weight: 700;
+        margin: 0 8px 24px;
+        @include breakpoint(mamabear) {
+            margin: 0 0 20px;
+        }
+
+        @include pretty-checkradio("span", "\f111", "\f058");
+    }
+
+    .woocommerce-billing-fields__field-wrapper,
+    .woocommerce-shipping-fields__field-wrapper,
+    .woocommerce-additional-fields__field-wrapper,
+    .wc__checkout__field__row,
+    .woocommerce-account-fields {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        @include breakpoint(mamabear) {
+            flex-direction: column;
+        }
+
+        p {
+            flex: 1 0 100%;
+            padding: 0 8px 24px;
+            line-height: 25px;
+            font-size: 14px;
+            @include breakpoint(mamabear) {
+                padding: 0 0 20px;
+            }
+
+            // billing & shipping
+            &#billing_first_name_field,
+            &#shipping_first_name_field,
+            &#billing_last_name_field,
+            &#shipping_last_name_field,
+            &#billing_company_field,
+            &#shipping_company_field,
+            &#billing_country_field,
+            &#shipping_country_field,
+            &#billing_address_1_field,
+            &#shipping_address_1_field,
+            &#billing_address_2_field,
+            &#shipping_address_2_field,
+            &#billing_phone_field,
+            &#shipping_phone_field,
+            &#billing_email_field,
+            &#shipping_email_field,
+            &#account_username_field,
+            &#account_password_field {
+                flex: 1 0 50%;
+                @include breakpoint(mamabear) {
+                    width: 100%;
+                    flex: 1 0 auto;
+                }
+            }
+
+            &#billing_city_field,
+            &#shipping_city_field,
+            &#billing_state_field,
+            &#shipping_state_field,
+            &#billing_postcode_field,
+            &#shipping_postcode_field {
+                flex: 1 0 50%;
+                @include breakpoint(mamabear) {
+                    width: 100%;
+                    flex: 1 0 auto;
+                }
+            }
+
+            &#billing_address_2_field,
+            &#shipping_address_2_field {
+                &:before {
+                    content: "Address 2";
+                    display: block;
+                    color: $text;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding-bottom: 5px;
+                }
+
+                label {
+                    display: none;
+                }
+            }
+
+            label {
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+                color: $text;
+                padding-bottom: 5px;
+                small {
+                    text-transform: none;
+                    font-weight: 400;
+                    margin: 5px 0;
+                }
+
+                abbr.required {
+                    color: tomato;
+                }
+
+                @include pretty-checkradio("span", "\f111", "\f058");
+            }
+
+            span.description {
+                padding-top: 10px;
+                font-size: 12px;
+                line-height: 17px;
+                display: block;
+            }
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            input[type="password"],
+            input[type="number"],
+            select,
+            textarea {
+                border: none;
+                padding: 16px;
+                width: auto;
+                font-size: 14px;
+                font-weight: 500;
+                color: $text;
+                width: 100%;
+                font-family: var(--fl1-primary-font);
+                background: var(--fl1-lightgrey);
+                border-radius: var(--fl1-radius-sm);
+            }
+
+            select {
+                font-family: var(--fl1-primary-font);
+                appearance: none;
+                border-radius: var(--fl1-radius-sm);
+                background-image: url("modules/woocommerce/img/select-arrow-down.png");
+                background-size: 25px;
+                background-position: center right;
+                background-repeat: no-repeat;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            // shipping
+            textarea {
+                height: 220px;
+            }
+
+            ::-webkit-input-placeholder,
+            ::-moz-placeholder,
+            :-ms-input-placeholder,
+            :-moz-placeholder { color: var(--fl1-text); opacity: 0.7;}
+
+            .woocommerce-password-strength {
+                margin: 10px 0 0;
+                font-size: 14px;
+                font-weight: 700;
+				border-radius: var(--fl1-radius-sm);
+                padding: 10px;
+                text-align: center;
+                font-size: 14px;
+                &.bad,
+                &.short {
+                    background: #fde9e5;
+                    color: tomato;
+                }
+
+                &.good {
+                    background: #fdf0e1;
+                    color: #f98806;
+                }
+                &.strong {
+                    background: #f0fde1;
+                    color: #61b105;
+                }
+            }
+
+            .woocommerce-password-hint {
+                background: rgba(255,255,255,0.1);
+				border-radius: var(--fl1-radius-sm);
+                box-shadow: 0 1px 2px rgba(black, 0.05);
+                font-size: 13px;
+                margin-top: 10px;
+                padding: 20px;
+                display: flex;
+                
+                &:before {
+                    font-family: "Font Awesome 6 Pro";
+                    content: "\f0eb";
+                    font-size: 22px;
+                    color: var(--fl1-white);
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .woocommerce-additional-fields__field-wrapper {
+        padding-bottom: 0;
+    }
+
+    // Account login form (force login)
+    .woocommerce-account-fields {
+        margin-bottom: 40px;
+        border: none;
+        background: linear-gradient(150deg, rgba(0,21,73,1) 65%, rgba(71,32,85,1) 90%, rgba(125,48,138,1) 100%);
+        padding: 32px;
+        border-radius: var(--fl1-radius-md);
+        &:before {
+            content: "Create an account";
+            display: block;
+            font-size: 22px;
+            color: var(--fl1-white);
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: var(--fl1-primary-font);
+        }
+
+        p {
+            padding: 0 0 0 10px;
+			color: #fff;
+            &:first-child {
+                padding: 0 10px 8px 0;
+            }
+        }
+
+        div.create-account {
+            width: 100%;
+            display: flex;
+            padding-top: 10px;
+            @include breakpoint(mamabear) {
+                flex-direction: column;
+                p {
+                    flex: 1 0 auto;
+                    padding: 0 0 10px;
+                }
+            }
+
+            label { 
+                color: var(--fl1-white);
+            }
+
+            input {
+                background: var(--fl1-white);
+            }
+        }
+    }
+}

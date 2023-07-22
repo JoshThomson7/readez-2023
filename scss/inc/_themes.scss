@@ -1,0 +1,87 @@
+.tlc-theme-default { 
+    --fl1-primary: var(--tlc-default);
+}
+
+.tlc-theme-write {
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-write);
+		color: var(--fl1-text) !important;
+
+		i { 
+			color: var(--fl1-text);
+		}
+	}
+
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed { 
+		--fl1-primary: var(--tlc-write);
+		li.active a { 
+			color: var(--fl1-text) !important;
+		}
+	}
+
+	.fc_testimonials .stars { 
+		--fl1-primary: var(--tlc-write);
+	}
+}
+
+.tlc-theme-spell { 
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed,
+	.fc_testimonials .stars,
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-spell);
+	}
+}
+
+.tlc-theme-read { 
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed,
+	.fc_testimonials .stars,
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-read);
+	}
+}
+
+.tlc-theme-progress { 
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed,
+	.fc_testimonials .stars,
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-progress);
+	}
+}
+
+.tlc-theme-poetry { 
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed,
+	.fc_testimonials .stars,
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-poetry);
+	}
+}
+
+.tlc-theme-parents { 
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed,
+	.fc_testimonials .stars,
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-parents);
+	}
+}
+
+.tlc-theme-home-learning { 
+	.fc_video,
+	.fc_buttons,
+	ul.tabbed,
+	.fc_testimonials .stars,
+	.avb-banner__caption-actions a {
+    	--fl1-primary: var(--tlc-home-learning);
+	}
+}

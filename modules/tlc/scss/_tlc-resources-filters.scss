@@ -1,0 +1,52 @@
+&-filters {
+	padding-right: var(--fl1-spacing-xs);
+
+	article {
+		padding: var(--fl1-spacing-xs) 0;
+		
+		h3 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			font-size: 14px;
+			font-weight: 700;
+			color: var(--fl1-text);
+			cursor: pointer;
+
+			i {
+				color: var(--fl1-primary);
+			}
+		}
+
+		ul {
+			display: none;
+			margin-top: 16px;
+			padding-right: 8px;
+			li {
+				margin-bottom: 8px;
+				display: flex;
+				align-items: center;
+				@include pretty-checkradio("label", "\f111", "\f058");
+
+				label {
+					font-size: 12px;
+				}
+			}
+		}
+
+		&.expand {
+			ul {
+				display: block;
+			}
+		}
+
+		&.solid { 
+			background: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-radius: var(--fl1-radius-md);
+			margin-bottom: var(--fl1-spacing-md);
+			padding: var(--fl1-spacing-md);
+		}
+	}
+}

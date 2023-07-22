@@ -1,0 +1,292 @@
+.tlc-event {
+	&--hero {
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+		justify-content: space-between;
+
+		article {
+			flex: 1;
+			padding: var(--fl1-spacing-xl) var(--fl1-spacing-xxxl) var(--fl1-spacing-xxl) 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--fl1-spacing-md);
+			h1 {
+				font-size: 2.5rem;
+				color: var(--fl1-text-color);
+				font-weight: 700;
+			}
+		}
+
+		&-meta {
+			background: var(--fl1-white);
+			border-radius: var(--fl1-radius-lg);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 26rem;
+			width: 100%;
+
+			.dates {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: var(--fl1-spacing-md);
+				border-bottom: 1px solid var(--fl1-lightgrey);
+
+				.separator {
+					width: 24px;
+					height: 4px;
+					background: var(--fl1-primary);
+				}
+
+				.date {
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+					border-radius: var(--fl1-radius-sm);
+					overflow: hidden;
+
+					span {
+						background: var(--fl1-primary);
+						font-size: 0.75rem;
+						font-weight: 700;
+						text-transform: uppercase;
+						color: var(--fl1-white);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: var(--fl1-spacing-xs);
+					}
+
+					strong {
+						font-size: var(--fl1-font-lg);
+						font-weight: 700;
+						color: var(--fl1-text);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 0.75rem;
+					}
+				}
+			}
+
+			.meta-data {
+				padding: var(--fl1-spacing-lg) var(--fl1-spacing-md);
+
+				ul { 
+					display: flex;
+					flex-direction: column;
+					gap: var(--fl1-spacing-md);
+
+					li {
+						display: flex;
+						flex-wrap: wrap;
+						font-size: var(--fl1-font-xxs);
+
+						strong { 
+							font-weight: 700;
+							color: var(--fl1-primary);
+							min-width: 100px;
+							display: block;
+						}
+
+						span { 
+							color: var(--fl1-text);
+							display: block;
+						}
+					}
+				}
+			}
+
+			.actions { 
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: var(--fl1-spacing-md);
+				border-top: 1px solid var(--fl1-lightgrey);
+			}
+		}
+	}
+}
+
+.em {
+
+	.em-login { 
+		padding: var(--fl1-spacing-md) !important;
+		background: #e0f1ff;
+		border-radius: var(--fl1-radius-lg);
+		
+		.em-login-trigger { 
+			text-align: center;
+		}
+
+		.em-login-content {
+			p { 
+				margin-bottom: 8px !important;
+
+				&:first-of-type {
+					margin-bottom: 16px !important;
+				}
+			}
+
+			button,
+			input[type="submit"] {
+				border-radius: 24px !important;
+			}
+		}
+	}
+
+	.em-login-trigger { 
+		font-style: normal !important;
+		a { 
+			font-weight: 700 !important;
+			color: var(--fl1-primary) !important;
+		}
+	}
+
+	&.em-event-booking-form {
+		text-align: center;
+		a { 
+			color: var(--fl1-primary) !important;
+			display: inline-block;
+			margin-left: 4px;
+		}
+
+		form { 
+			text-align: left;
+		}
+
+		.em-booking-message { 
+			border-radius: var(--fl1-radius-lg) !important;
+			padding: var(--fl1-spacing-lg) !important;
+			ul { 
+				margin-left: var(--fl1-spacing-lg) !important;
+			}
+		}
+
+		h3.em-booking-section-title {
+			all: unset;
+			font-size: var(--fl1-font-lg) !important;
+			font-weight: 700 !important;
+			color: var(--fl1-primary);
+			margin-bottom: var(--fl1-spacing-md) !important;
+			display: block;
+			letter-spacing: normal !important;
+		}
+
+		.em-booking-form-section-summary,
+		.em-booking-form-section-details,
+		.em-booking-form-section-tickets {
+			background: var(--fl1-white);
+			border-radius: var(--fl1-radius-lg);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: var(--fl1-spacing-xl) !important;
+			margin-bottom: var(--fl1-spacing-xl) !important;
+		}
+
+		.em-booking-section {
+			padding: 0;
+		}
+
+		.em-tickets {
+			margin: 0;
+			width: 100%;
+		}
+
+		.em-ticket-bookings {
+			margin: 0 !important;
+
+			.em-ticket-booking {
+				margin: 32px 0 0 !important;
+				padding: var(--fl1-spacing-md) !important;
+				background: var(--fl1-lightgrey);
+				border-radius: var(--fl1-radius-lg);
+				border-top: none !important;
+
+				&:first-of-type {
+					margin-top: 0 !important;
+				}
+			}
+		}
+
+		.em-booking-form-section-confirm {
+			.em-form-submit {
+				all: unset !important;
+				font-family: var(--fl1-primary-font) !important;
+				font-weight: 700 !important;
+				display: flex !important;
+				box-shadow: none !important;
+				transform: scale3d(1, 1, 1) !important;
+				text-align: center !important;
+				justify-content: center !important;
+				align-items: center !important;
+				border: none !important;
+				cursor: pointer !important;
+				line-height: 1 !important;
+				transition: all 0.3s ease !important;
+				border-radius: 50px !important;
+				font-size: var(--fl1-font-md) !important;
+				padding: var(--fl1-spacing-sm) var(--fl1-spacing-md) !important;
+				background-color: var(--fl1-primary) !important;
+				color: #fff !important;
+				box-sizing: unset !important;
+			}
+		}
+
+		.em-booking-message {
+			p,
+			li { 
+				font-size: var(--fl1-font-xs) !important;
+			}
+		}
+
+		select,
+		input { 
+			font-family: var(--fl1-primary-font) !important;
+		}
+	}
+
+	&.pixelbones {
+		font-family: var(--fl1-primary-font) !important;
+
+		&.input {
+			label { 
+				font-size: var(--fl1-font-xxs) !important;
+				font-weight: 700 !important;
+				margin-bottom: 4px !important;
+
+				.em-form-required { 
+					color: var(--fl1-error) !important;
+				}
+			}
+			input[type="submit"] {
+				font-family: var(--fl1-primary-font) !important;
+				font-weight: 700 !important;
+				display: flex !important;
+				box-shadow: none !important;
+				transform: scale3d(1, 1, 1) !important;
+				text-align: center !important;
+				justify-content: center !important;
+				align-items: center !important;
+				border: none !important;
+				cursor: pointer !important;
+				line-height: 1 !important;
+				transition: all 0.3s ease !important;
+				border-radius: 50px !important;
+				font-size: var(--fl1-font-sm) !important;
+				padding: var(--fl1-spacing-sm) var(--fl1-spacing-md) !important;
+				background-color: var(--fl1-primary) !important;
+				color: #fff !important;
+				box-sizing: unset !important;
+				text-transform: none !important;
+				width: 96% !important;
+				letter-spacing: normal !important;
+
+				&:hover { 
+					transition: all 0.3s ease;
+					transform: scale3d(1.02, 1.02, 1.02);
+					color: #fff !important;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+// Hexagon Grid
+// .fc-hexagons { 
+// 	max-width: 1120px;
+// 	width: 100%;
+// 	margin: 0 auto;
+
+// 	&--main {
+// 		display:flex;
+// 		--s: 260px;  /* size  */
+// 		--m: 8px;    /* margin */
+// 		--f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+// 		padding: 0 0 var(--fl1-spacing-xxl) var(--fl1-spacing-md);
+// 	}
+
+// 	&--container {
+// 		font-size: 0; /*disable white space between inline block element */
+
+// 		figure {
+// 			width: var(--s);
+// 			margin: var(--m);
+// 			height: calc(var(--s)*1.1547); 
+// 			display: inline-block;
+// 			font-size:initial;
+// 			clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+// 			background: lightsteelblue;
+// 			margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+
+// 			&.hide { 
+// 				background: transparent;
+// 			}
+// 		}
+
+// 		&::before {
+// 			content: "";
+// 			width: calc(var(--s)/2 + var(--m));
+// 			float: left;
+// 			height: 120%;
+// 			shape-outside: repeating-linear-gradient(     
+// 							#0000 0 calc(var(--f) - 3px),      
+// 							#000  0 var(--f));
+// 		}
+// 	}
+// }
+
+
+
+//--- IMPORT ---------------------------------//
+@import 'hexi-flexi-grid';
+
+
+//--- TEMPLATE -------------------------------//
+#hexGrid {
+	margin: 0 auto;
+//--- SETTINGS -------------- VALUES ---------//
+  $gridWidth:   800px;       // 'auto',(px,pt,r/em,vw/h)
+  $gridHeight:  auto;       // 'auto',(px,pt,r/em,vw/h)
+  $columnCount: 3;          // 'auto',(number)
+  $rowCount:    3;          // 'auto',(number)
+  $hexCount:    auto;       // 'auto',(number)
+  $hexLayout:   row;        // 'row','column','strict'
+  $gridOrient:  vertical;   // 'vertical','horizontal'
+  $crop:        none;       // 'none','crop'
+  $cropFactor:  1;          // (number)
+  $hexContent:  auto;       // 'auto','center'
+  $hexSize:     auto;       // 'auto',(px,pt,r/em,vw/h)
+  $hexMargin:   0em;      // (px,pt,r/em,vw/h)
+  $hexShape:    hexagon;    // 'hexagon','circle'
+  $hexColor:    transparent;    // hexcode,rgb/a,named
+  $images:      none;
+
+//--- MIXINS ---------------------------------//
+  @include hexWrapper($gridWidth,$gridHeight,
+    $gridOrient,$rowCount,$columnCount);
+  .hexCrop {@include hexCrop($crop,$cropFactor)}
+  .hexGrid {@include hexContainer($gridWidth,$gridHeight,
+    $gridOrient,$columnCount, $images,$rowCount,
+    $hexLayout,$hexContent,$hexShape,$hexColor,
+    $hexMargin,$hexCount,$hexSize,)}
+//--- CUSTOM STYLES --------------------------//
+
+	.hexGrid {
+		margin-top: -120px;
+		position: relative;
+		z-index: 1;
+		.hex {
+			transform: scale(1);
+			transition: all 0.3s ease-in-out;
+
+			a { 
+				display: block;
+			}
+
+			&.hide { 
+				background-color: transparent
+			}
+
+			&:hover { 
+				transition: all 0.3s ease-in-out;
+				transform: scale(1.05);
+			}
+		}
+	}
+
+//--------------------------------------------//
+}
