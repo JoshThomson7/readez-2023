@@ -32,7 +32,7 @@
 
                             <div class="logo">
                                 <a href="<?php echo esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/tlc-logo.svg'); ?>" alt="<?php bloginfo('name'); ?>"/>
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" alt="<?php bloginfo('name'); ?>"/>
                                 </a>
                             </div>
 
@@ -52,15 +52,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <?php
-                                        // get woocommerce account url
-                                        $acc_btn_text = 'Sign in';
-                                        if(is_user_logged_in()) {
-                                            $acc_btn_text = 'Portal';
-                                        }
-                                    ?>
-                                    <a href="<?php echo FL1_Woo_Helpers::get_my_account_url(); ?>" class="button primary small icon-right">
-                                        <span><?php echo $acc_btn_text; ?></span>
+                                    <a href="#" class="button primary small icon-right">
+                                        <span>Buy Now</span>
                                         <i class="fa fa-chevron-right"></i>
                                     </a>
                                 </li>        
@@ -69,7 +62,7 @@
                     </div><!-- max__width -->
                 </div><!-- header__main -->
             </header><!-- header -->
-            
+
             <?php
 				AVB::avb_banners(array(
 					'is_page' => 'dashboard',
@@ -77,4 +70,5 @@
 					'is_search' => '',
 				));
             ?>
+            
         </section><!-- header-banner -->

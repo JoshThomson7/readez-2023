@@ -13,7 +13,7 @@ body {
 
 	.header-banner {
 		position: relative;
-		background: var(--fl1-primary-light);
+		background: #eff4f7;
 
 		&::after {
 			content: "";
@@ -36,7 +36,7 @@ body {
 #page {
 	display: flex;
 	flex-direction: column;
-	background: var(--fl1-primary-light);
+	background: #eff4f7;
 	&.sticky {
 		padding-top: 100px;
 	}

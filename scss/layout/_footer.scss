@@ -11,7 +11,7 @@
 footer {
     position: relative;
     background: var(--fl1-primary);
-    background: linear-gradient(150deg, rgba(0,21,73,1) 65%, rgba(71,32,85,1) 90%, rgba(125,48,138,1) 100%);
+    background: linear-gradient(150deg, rgba(54, 73, 84,1) 65%, rgba(54, 73, 84,1) 90%, rgba(54, 73, 84,1) 100%);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100%;
@@ -21,7 +21,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px lighten(#1b1b1e, 10%) solid;
+        border-bottom: 1px lighten(#fff, 10%) solid;
         padding: 32px 0;
 
         @include breakpoint(grandpabear) {

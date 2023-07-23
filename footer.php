@@ -47,23 +47,8 @@
 				<div class="footer__social">
 					<ul>
 						<li>
-							<a href="https://www.facebook.com/pages/category/School/The-Literacy-Company-644365468908757/" target="_blank">
-								<?php echo file_get_contents(FL1_PATH . '/img/svgs/facebook-f.svg'); ?>
-							</a>
-						</li>
-						<li>
 							<a href="https://www.instagram.com/theliteracycompany/" target="_blank">
 								<?php echo file_get_contents(FL1_PATH . '/img/svgs/instagram.svg'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="https://twitter.com/TheLCUK/" target="_blank">
-								<?php echo file_get_contents(FL1_PATH . '/img/svgs/twitter.svg'); ?>
-							</a>
-						</li>
-						<li>
-							<a href="https://uk.linkedin.com/company/the-literacy-company-uk" target="_blank">
-								<?php echo file_get_contents(FL1_PATH . '/img/svgs/linkedin-in.svg'); ?>
 							</a>
 						</li>
 					</ul>
@@ -74,19 +59,15 @@
 		<div class="footer__menus">
 			<div class="max__width">
 				<article>
-					<figure>
-						<img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/img/tlc-logo-white.svg'); ?>" alt="<?php bloginfo('name'); ?>" />
-					</figure>
 					<ul>
 						<li>
 							<i class="fa-light fa-location-dot"></i>
-							The Literacy Company<br />
-							10, Linenhall House<br />
-							Stanley St<br />
-							Chester<br />
-							CH1 2LR
+							Read EZ<br>
+							131a Dixons Hill Road<br>
+							Herts<br>
+							AL9 7DW
 						</li>
-						<li><i class="fa-light fa-phone"></i> 01244 445050</li>
+						<li><i class="fa-light fa-phone"></i> 01707 414 700</li>
 					</ul>
 				</article>
 
@@ -110,11 +91,11 @@
 			<div class="max__width">
 
 				<div class="subfooter--left">
-					<small>&copy; <?php bloginfo('name') ?> <?php echo date('Y'); ?>. Registered with number: 08573079</small>
+					<small>&copy; <?php bloginfo('name') ?> <?php echo date('Y'); ?></small>
 				</div><!-- subfooter--left -->
 
 				<div class="subfooter--right">
-					<small><a href="http://www.fl1.digital" target="_blank">Powered by FL1 Digital</a></small>
+					<small><a href="https://thomson-website-solutions.com/" target="_blank">Powered by Thomson Website Solutions</a></small>
 				</div><!-- subfooter--left -->
 
 			</div><!-- max__width -->
@@ -125,9 +106,9 @@
 		<div class="spotlight-search--content">
 			<a href="#" class="spotlight-close"><i class="fal fa-times"></i></a>
 
-			<h2>Search TLC</h2>
+			<h2>Search Read EZ</h2>
 			<form action="<?php echo esc_url(home_url()); ?>">
-				<input type="text" name="s" placeholder="ie. Pathways Literacy" />
+				<input type="text" name="s" placeholder="ie. OVerlays" />
 				<button type="submit" class="button primary"><i class="fal fa-search"></i></button>
 			</form>
 		</div>
