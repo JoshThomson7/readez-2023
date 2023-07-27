@@ -22,9 +22,6 @@ class FL1_Woo_Register {
 
 		add_action('wp_login', array($this, 'link_orders_login'), 10, 2);
         add_action('wc_guest_to_customer_linked_orders', array($this, 'maybe_show_linked_order_count'));
-
-		add_filter('woocommerce_min_password_strength', array($this, 'min_password_strength'));
-		add_filter('password_hint', array($this, 'password_hint_message'));
         
     }
 
@@ -80,8 +77,6 @@ class FL1_Woo_Register {
         $this->update_new_customer_past_orders($user_id);
         $this->update_user_nicename($user_id);
 
-		do_action('fl1_woo_after_customer_created', $user_id);
-
 		$user = new FL1_Woo_User($user_id);
 
         // Generate unique verification key
@@ -101,10 +96,8 @@ class FL1_Woo_Register {
 		$email->To(array($user->get_email()));
 		$email->Subject('Verify your account');
 
-		$styles = $email->get_email_styles();
-
 		$body = '<p>Please verify your account by clicking on the button below.</p>';
-		$body .= '<p><a style="' . $styles['button'] . '" href="'.esc_url($verification_url).'" target="_blank">Verify</a></p>';
+		$body .= '<p><a class="button" href="'.esc_url($verification_url).'" target="_blank">Verify</a></p>';
 
 		$email->Body($body);
 		$email->send();
@@ -262,34 +255,5 @@ class FL1_Woo_Register {
         ));
 
     }
-
-	/**
-	 * Change the strength requirement for WooCommerce passwords
-	 *
-	 * @author Misha Rudrastyh
-	 * @url https://rudrastyh.com/woocommerce/password-strength-meter.html#change-minimum-strength
-	 *
-	 * Strength Settings
-	 * 4 = Strong
-	 * 3 = Medium (default) 
-	 * 2 = Also Weak but a little bit stronger 
-	 * 1 = Password should be at least Weak
-	 * 0 = Very Weak / Anything
-	 */
-	public function min_password_strength($strength) {
-		return 2;
-	}
-
-	/**
-	 * Change the wording of the password hint.
-	 *
-	 * @param string $hint
-	 * @return string
-	 */
-	public function password_hint_message( $hint ) {
-		$hint = __( 'Hint: Make your password stronger by using upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & ).', 'text-domain' );
-
-		return $hint;
-	}
 
 }

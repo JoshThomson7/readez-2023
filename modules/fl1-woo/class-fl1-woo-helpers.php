@@ -27,9 +27,8 @@ class FL1_Woo_Helpers {
 
         $items = array(
             'dashboard'         => __( 'Dashboard', 'woocommerce' ),
-            'my-courses'        => __( 'Online Courses', 'woocommerce' ),
-            'my-events'         => __( 'Live Courses &amp; Events', 'woocommerce' ),
-            'wishlist'          => __( 'Wishlist', 'woocommerce' ),
+            'my-courses'        => __( 'Courses', 'woocommerce' ),
+            'my-events'         => __( 'Events', 'woocommerce' ),
             'orders'            => __( 'Orders', 'woocommerce' ),
             'payment-methods'   => __( 'Payment methods', 'woocommerce' ),
             'edit-address'      => __( 'Addresses', 'woocommerce' ),
@@ -97,15 +96,11 @@ class FL1_Woo_Helpers {
                 $icon = 'fa-dashboard';
                 break;
 
-            case 'Online Courses':
+            case 'Courses':
                 $icon = 'fa-chalkboard-user';
                 break;
 
-            case 'Wishlist':
-                $icon = 'fa-heart';
-                break;
-
-            case 'Live Courses &amp; Events':
+            case 'Events':
                 $icon = 'fa-calendar-day';
                 break;
 
@@ -144,19 +139,6 @@ class FL1_Woo_Helpers {
         return $icon;
 
     }
-
-	/**
-     * Account menu icon
-     * @return string
-     */
-    public static function product_message($heading = '', $message = '') {
-		?>
-		<div class="wc-single-product--message">
-			<?php if($heading): ?><h5><?php echo $heading; ?></h5><?php endif; ?>
-				<?php if($message): ?><p><?php echo $message; ?></p><?php endif; ?>
-		</div>
-		<?php
-	}
     
 }
 

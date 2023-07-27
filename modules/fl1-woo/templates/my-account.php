@@ -72,7 +72,19 @@ $user = new TLC_User(get_current_user_id());
             </aside>
 
             <div class="pit">
-                <?php do_action('woocommerce_account_content'); ?>
+                <?php
+                    if(FL1_Woo_Helpers::is_account_endpoint('dashboard')) {
+                        echo '<a href="'.$user->thinkific_sso_url('https://the-literacy-company-online.thinkific.com/courses/take/new-subject-lead-session-4-lr-nsl04/').'" target="_blank">View course</a>';
+                        do_action('wc_guest_to_customer_linked_orders');
+
+                    } elseif (FL1_Woo_Helpers::is_account_endpoint('my-courses')) {
+                        echo 'Courses';
+                    } elseif (FL1_Woo_Helpers::is_account_endpoint('my-events')) {
+                        echo 'Events';
+                    } else {
+                        do_action('woocommerce_account_content');
+                    }
+                ?>
             </div>
         </div>
     </main>

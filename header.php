@@ -52,7 +52,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="button primary small icon-right">
+                                    <a href="/products" class="button primary small icon-right">
                                         <span>Buy Now</span>
                                         <i class="fa fa-chevron-right"></i>
                                     </a>

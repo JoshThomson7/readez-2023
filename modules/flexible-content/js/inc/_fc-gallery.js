@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
     });
 
     var gallery = $('.gallery__images.gallery__carousel');
-    var galleryItems = 6;
+    var galleryItems = 4;
     var inSidebar = gallery.closest('.apm__content--content');
 
     if(gallery.length > 0) {

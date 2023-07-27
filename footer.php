@@ -108,7 +108,7 @@
 
 			<h2>Search Read EZ</h2>
 			<form action="<?php echo esc_url(home_url()); ?>">
-				<input type="text" name="s" placeholder="ie. OVerlays" />
+				<input type="text" name="s" placeholder="ie. Overlays" />
 				<button type="submit" class="button primary"><i class="fal fa-search"></i></button>
 			</form>
 		</div>

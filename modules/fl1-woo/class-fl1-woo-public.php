@@ -21,16 +21,15 @@ class FL1_Woo_Public {
         add_action('body_class', array($this, 'body_classes'), 20);
 
         add_filter('page_template', array($this, 'pages'));
+        add_filter('single_template', array($this, 'singles'));
 
-        add_action('wp', array($this, 'redirects'));
-
-		add_filter('avb_banners_path', array($this, 'avb_banners_path'), 10, 2);
+        add_action('template_redirect', array($this, 'redirects'));
 
     }
 
     public function enqueue() {
 
-        if(is_woocommerce() || is_cart() || is_checkout() || is_page(array('register', 'login', 'magic-link', 'wishlist', get_option('woocommerce_myaccount_page_id')))) {
+        if(is_woocommerce() || is_cart() || is_checkout() || is_page(array('register', 'login', 'magic-link', get_option('woocommerce_myaccount_page_id')))) {
             wp_enqueue_style(FL1_WOO_SLUG, FL1_WOO_URL.'assets/fl1-woo.min.css');
         }
 
@@ -117,15 +116,22 @@ class FL1_Woo_Public {
     
     }
 
-	public function avb_banners_path($path, $post_id) {
+    /**
+     * single_template filter function
+     * 
+     * @param string $template
+     */
+    public function singles($template) {
+    
+        // global $post;
 
-		if(get_post_type($post_id) === 'product') {
-			$path = FL1_WOO_PATH . 'templates/single-product/single-product-hero.php';
-		}
+        // if($post->post_type === 'travel-guide') {
+        //     $template = TLC_PATH . 'templates/travel-guides/single-travel-guide.php';
+        // }
 
-		return $path;
-
-	}
+        return $template;
+    
+    }
 
     /**
      * WooCommerce redirects
@@ -133,7 +139,7 @@ class FL1_Woo_Public {
     public function redirects() {
     
         if(is_page('shop')) { 
-            wp_redirect(home_url(), 301);
+            wp_redirect(esc_url(home_url()), 301);
             exit;
         }
     

@@ -9,6 +9,9 @@
 global $post, $woocommerce, $product;
 
 $variations = $product->get_available_variations();
+if(empty($variations)) {
+	return;
+}
 $product_type = $product->get_type();
 
 $attributes = get_post_meta($product->get_id() , '_product_attributes');
