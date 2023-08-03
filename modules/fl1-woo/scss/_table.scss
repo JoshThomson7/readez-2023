@@ -1,0 +1,150 @@
+/**
+ * Woo Single Product
+ *
+ * @package woocommerce/
+ * @version 1.0
+*/
+
+table.shop_table {
+    width: 100%;
+    thead {
+        @include breakpoint(mamabear) {
+            display: none;
+        }
+
+        tr {
+            th {
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--fl1-text);
+                padding: 0 10px;
+                text-align: left;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            width: 100%;
+            @include breakpoint(mamabear) {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px 0;
+            }
+
+            td {
+                padding: 8px;
+                text-align: left;
+                vertical-align: middle;
+                font-size: 14px;
+                @include breakpoint(mamabear) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: none;
+                    padding: 0 12px 12px;
+                    &:before {
+                        display: block;
+                        content: attr(data-title);
+                        font-size: 14px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+
+                a {
+                    color: $primary;
+                    font-weight: 600;
+                }
+
+                strong {
+                    font-weight: 700;
+                    &.highlight {
+                        color: darken($border, 30%);
+                    }
+                }
+
+                small {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .wc__cart__product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 17px;
+            font-weight: 700;
+            .woocommerce-Price-amount {
+                color: var(--fl1-text);
+                font-weight: 700;
+                font-size: 22px;
+            }
+
+            &--item {
+                display: flex;
+                align-items: center;
+            }
+            &--img {
+                width: 80px;
+                margin-right: 20px;
+
+                img { 
+                    border-radius: 8px;
+                }
+            }
+
+            &--price {
+                display: flex;
+                align-items: center;
+                .cart-qty {
+                    max-width: 50px;
+                    margin-right: 20px;
+                    @include breakpoint(mamabear) {
+                        max-width: 100px;
+                    }
+                    input[type="number"] {
+                        font-family: var(--fl1-primary-font);
+                        border: none;
+                        padding: 10px 0 10px 10px;
+                        width: auto;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: var(--fl1-text);
+                        width: 100%;
+                        border-bottom: 1px var(--fl1-text) solid;
+                        text-align: center;
+                    }
+                }
+            }
+
+            &--meta {
+                margin: 10px 0;
+                ul {
+                    font-size: 14px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        padding: 3px 0;
+                        strong {
+                            font-weight: 700;
+                            min-width: 120px;
+                        }
+                        span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce-orders-table { 
+    background: #fff;
+    border-radius: var(--fl1-border-radius-m);
+    padding: 32px;
+}

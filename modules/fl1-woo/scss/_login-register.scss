@@ -1,0 +1,420 @@
+/**
+ * WooCommerce Login/Register
+ *
+ * @package woocommerce/
+ * @version 1.0
+*/
+
+.wc__login__register {
+    display: flex;
+    min-height: 100%;
+    position: relative;
+
+    .wc__login__register--back {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        a {
+            display: flex;
+            i {
+                font-size: 30px;
+                color: var(--fl1-primary);
+            }
+        }
+    }
+
+    .wc__login__register--banner {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($primary, 0.9);
+            z-index: 1;
+        }
+        width: 40%;
+        position: relative;
+        background: $quaternary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding: 0 80px 0;
+        background: url('https://tlc.wpdev3.com/wp-content/uploads/2022/11/AdobeStock_97724364-1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include breakpoint(papabear) {
+            padding: 0 20px 0;
+        }
+        @include breakpoint(brotherbear) {
+            display: none;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            margin-top: -200px;
+            position: relative;
+            z-index: 2;
+        }
+
+        ul {
+            position: relative;
+            z-index: 2;
+            li {
+                font-size: 16px;
+                color: #fff;
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                i {
+                    color: #fff;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .wc__login__register--form {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 150px;
+        background: #fff;
+
+		&-content { 
+			max-width: 450px;
+            width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+        @include breakpoint(papabear) {
+            padding-top: 80px;
+        }
+        @include breakpoint(brotherbear) {
+            width: 100%;
+            padding: 80px 20px 0;
+        }
+
+        .woocommerce-notices-wrapper {
+            flex: 0 auto;
+        }
+
+        ul {
+            &.woocommerce-message,
+            &.woocommerce-error {
+                flex: 0 auto;
+                margin: 0;
+            }
+
+            &.woocommerce-message {
+                margin-bottom: 20px;
+            }
+        }
+
+        figure {
+            max-width: 265px;
+            margin-bottom: 20px;
+        }
+
+        .wc__is__user {
+            padding: 0 0 40px;
+            text-align: center;
+            max-width: 450px;
+            h2 {
+                font-size: 28px;
+                color: $primary;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            a {
+                color: $primary;
+                font-weight: 700;
+                text-decoration: underline;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+
+        form {
+			width: 100%;
+            &.register {
+                .wc__form__row {
+                    &.flex {
+                        display: flex;
+                        justify-content: space-between;
+                        .wc__form__field {
+                            width: 48%;
+                        }
+                    }
+                }
+            }
+
+            .wc__form__row {
+                padding-bottom: 20px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                .wc__form__field {
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        //display: none;
+                        span.required {
+                            color: tomato;
+                        }
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="password"] {
+                        font-family: $primaryFont;
+						color: var(--fl1-text);
+                        font-size: 16px;
+                        padding: 20px;
+                        border: none;
+                        background: var(--fl1-primary-light);
+                        border-radius: 8px;
+
+						&:focus { 
+							outline: none;
+							box-shadow: 0 0 5px var(--fl1-secondary);
+						}
+                    }
+
+                    &.wc__forgot__password {
+                        align-items: flex-end;
+                        a {
+                            font-size: 12px;
+                            color: $primary;
+                            text-decoration: underline;
+                            &:hover {
+                                color: $secondary;
+                            }
+                        }
+                    }
+
+					&.wc__magic__link { 
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						border-top: 1px solid var(--fl1-border);
+
+						p { 
+							font-size: 12px;
+							color: var(--fl1-text);
+							margin-top: var(--fl1-spacing-m);
+						}
+
+						span.or { 
+							background: #fff;
+							display: inline-block;
+							padding: 0 16px;
+							margin: -8px 0 var(--fl1-spacing-m);
+							color: var(--fl1-text);
+						}
+					}
+
+                    &.submit {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .wc__remember__me {
+                display: flex;
+                align-items: center;
+                @include pretty-checkradio("label", "\f111", "\f058");
+            }
+
+            .wc-social-login {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px $lightgrey solid;
+                a {
+                    margin-top: 20px;
+                }
+            }
+
+            // password strength
+            .woocommerce-password-strength {
+                margin: 10px 0 0;
+                border-radius: 3px;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 10px;
+                text-align: center;
+                font-size: 14px;
+                &.bad,
+                &.short {
+                    background: #fde9e5;
+                    color: tomato;
+                }
+
+                &.good {
+                    background: #fdf0e1;
+                    color: #f98806;
+                }
+                &.strong {
+                    background: #f0fde1;
+                    color: #61b105;
+                }
+            }
+
+            .woocommerce-password-hint {
+                background: #fff;
+                border-radius: 3px;
+                box-shadow: 0 1px 2px rgba(black, 0.05);
+                font-size: 13px;
+                margin-top: 10px;
+                padding: 20px;
+                display: flex;
+                border: 1px $lightgrey solid;
+                &:before {
+                    font-family: "Font Awesome 5 Pro";
+                    content: "\f0eb";
+                    font-size: 22px;
+                    color: $primary;
+                    margin-right: 10px;
+                }
+            }
+
+            .woocommerce-privacy-policy-text { 
+                font-size: 14px;
+                line-height: 20px;
+                a { 
+                    color: var(--fl1-primary);
+                }
+                margin-bottom: 16px;
+            }
+        }
+
+		#magic-login-shortcode {
+			width: 100%;
+			max-width: 450px;
+			margin: 0 auto;
+
+			p.message { 
+				margin: var(--fl1-spacing-m) 0;
+				padding: var(--fl1-spacing-l);
+				border-radius: var(--fl1-border-radius-s);
+				background: rgba(#D9F1FF, 0.9);
+				font-size: 14px;
+				line-height: 1.5;
+				border: none;
+				margin-top: 0;
+
+				&.magic_login_block_login_success { 
+					color: var(--fl1-text);
+				}
+			}
+
+			form { 
+				label {
+					font-size: 16px;
+					font-weight: 600;
+					margin-bottom: 5px;
+				}
+
+				input[type="text"] {
+					font-family: $primaryFont;
+					font-size: 16px;
+					padding: 20px;
+					border: none;
+					background: var(--fl1-primary-light);
+					border-radius: 8px;
+
+					&:focus { 
+						outline: none;
+						box-shadow: 0 0 5px var(--fl1-secondary);
+					}
+				}
+
+				input[type="submit"] {
+					background: var(--fl1-primary);
+        			color: #fff;
+					padding: 16px 24px;
+					font-size: 16px;
+					margin-top: var(--fl1-spacing-m);
+				}
+			}
+		}
+
+        .wc__login__register--footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: auto;
+            padding: 20px 0 60px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    padding: 0 10px;
+                    @include breakpoint(papabear) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 5px;
+                        &:first-child {
+                            flex: 1 0 100%;
+                        }
+                        &:nth-child(2) {
+                            flex: 1 0 100%;
+                        }
+                    }
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    &.secure {
+                        color: $success;
+                    }
+                    &.social {
+                        padding: 0 2px;
+                        font-size: 16px;
+                        a {
+                            color: $text;
+                        }
+                        &:first-of-type {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

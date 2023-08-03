@@ -1,0 +1,77 @@
+&.woocommerce-order-pay {
+    .order_details {
+        box-shadow: 0 1px 2px rgba(black, 0.05);
+        padding: 40px;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 960px;
+        margin: 40px auto 0;
+        &:before {
+            content: "Confirm and place order";
+            display: block;
+            font-size: 28px;
+            font-weight: 600;
+            color: $text;
+            margin-bottom: 20px;
+            flex: 1 0 100%;
+        }
+
+        li {
+            padding: 20px 0;
+            width: math.percentage(math.div(1, 2));
+            font-size: 18px;
+            font-weight: 700;
+            color: $primary;
+            @include breakpoint(papabear) {
+                padding: 10px;
+            }
+
+            @include breakpoint(papabear) {
+                width: 50%;
+            }
+            @include breakpoint(sisterbear) {
+                width: 100%;
+            }
+
+            strong {
+                font-size: 24px;
+                font-weight: 400;
+                display: block;
+                text-transform: none;
+                color: $text;
+                margin-top: 5px;
+                @include breakpoint(sisterbear) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    form.woocommerce-checkout {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        button {
+            font-family: var(--fl1-primary-font);
+            background: $primary;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 800;
+            padding: 20px 40px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-left: auto;
+            width: 100%;
+            text-align: center;
+            &:hover {
+                background: lighten($success, 3%);
+                transition: all 0.4s ease;
+                box-shadow: 0 3px 20px rgba(black, 0.1);
+            }
+        }
+    }
+}

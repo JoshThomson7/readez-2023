@@ -1,0 +1,81 @@
+.woocommerce-form-coupon-toggle {
+    width: 100%;
+    margin: 24px 0;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
+    background: #fff;
+    border-radius: var(--fl1-border-radius-m);
+
+    .woocommerce-info { 
+        margin-bottom: 0;
+    }
+}
+
+form.checkout_coupon {
+    display: flex;
+    align-items: center;
+    flex: 0 1 100%;
+    margin: -20px 0 20px;
+    padding: 32px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
+    background: #fff;
+    border-radius: var(--fl1-border-radius-m);
+    flex-wrap: wrap;
+    border-top: none;
+    
+    @include breakpoint(teenbear) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div.clear {
+        display: none;
+    }
+
+    p {
+        font-size: 14px;
+        color: $text;
+        margin-right: 10px;
+        @include breakpoint(sisterbear) {
+            margin-right: 0;
+        }
+        &:first-of-type {
+            flex: 1 0 100%;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+    }
+
+    input[type="text"] {
+        border: none;
+        padding: 12px 16px;
+        width: auto;
+        font-size: 12px;
+        color: var(--fl1-text);
+        margin: 0 10px 0 5px;
+        font-family: var(--fl1-primary-font);
+        background: var(--fl1-lightgrey);
+        border-radius: var(--fl1-border-radius-s);
+        @include breakpoint(sisterbear) {
+            width: 90%;
+        }
+    }
+
+    button,
+    input[type="submit"] {
+        font-family: var(--fl1-primary-font);
+        font-size: 14px;
+        font-weight: 800;
+        padding: 10px 23px;
+        display: block;
+        cursor: pointer;
+        background: $primary;
+        color: #fff;
+        border: none;
+        @include breakpoint(sisterbear) {
+            margin-top: 10px;
+        }
+        &:hover {
+            background: $primary;
+        }
+    }
+}

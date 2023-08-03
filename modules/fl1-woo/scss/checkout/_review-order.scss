@@ -1,0 +1,239 @@
+.woocommerce-checkout-review-order {
+    width: 100%;
+    background: #fff;
+    padding: 32px;
+    border-radius: var(--fl1-border-radius-m);
+    margin-top: 24px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
+    
+    @include breakpoint(papabear) {
+        width: 100%;
+        padding: 30px 10px;
+        margin-top: 0;
+    }
+
+    &:before {
+        content: "Double check your order";
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--fl1-text);
+        margin-bottom: 24px;
+        padding-left: 10px;
+    }
+
+    .card-storage-message {
+        display: flex;
+        padding: 14px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        background: $secondary;
+        margin: 20px 0;
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    .mailchimp-newsletter {
+        display: flex;
+        padding: 14px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        background: $tertiary;
+        margin: 20px 0;
+        @include pretty-checkradio("label", "\f0c8", "\f14a");
+        label {
+            font-weight: 700;
+        }
+    }
+
+    #apm_additional_info {
+        padding: 20px;
+        background: $tertiary;
+        margin-top: 10px;
+        h3 {
+            font-size: 17px;
+            color: $text;
+            font-weight: 700;
+            margin: 0 0 10px;
+            display: block;
+        }
+        p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    table.shop_table {
+        thead {
+            tr {
+                th {
+                    padding: 10px;
+                    &.product-total {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            border-bottom: 1px $primary solid;
+            tr {
+                @include breakpoint(mamabear) {
+                    display: table-row;
+                }
+
+                td {
+                    width: 50%;
+                    @include breakpoint(mamabear) {
+                        display: table-cell;
+                        padding: 10px;
+                    }
+
+                    .amount {
+                        color: $text;
+                        font-weight: 600;
+                    }
+
+                    &.product-name {
+                        text-align: left;
+                        font-weight: 600;
+                        .wc__product__name {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            strong {
+                                color: $primary;
+                            }
+                        }
+
+                        dl.variation {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            font-size: 13px;
+                            margin-top: 10px;
+                            color: $text;
+                            dt {
+                                flex: 1 0 50%;
+                                font-weight: 700;
+                            }
+                            dd {
+                                flex: 1 0 50%;
+                                margin-bottom: 10px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    &.product-total {
+                        text-align: right;
+                        vertical-align: top;
+                        .subscription-price {
+                            span.amount {
+                                font-size: 16px;
+                                color: $text;
+                                font-weight: 600;
+                                display: block;
+                            }
+
+                            .subscription-details {
+                                display: block;
+                                font-size: 12px;
+                                color: $text;
+                                margin-top: 5px;
+                                span.amount {
+                                    font-size: 12px;
+                                    color: $text;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        tfoot {
+            tr {
+                border-bottom: 1px $border solid;
+                th {
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 14px;
+                    vertical-align: middle;
+                    width: 50%;
+                }
+                td {
+                    text-align: right;
+                    padding: 10px;
+                    vertical-align: middle;
+                    width: 50%;
+                    .amount {
+                        color: $text;
+                        font-weight: 700;
+                    }
+                }
+
+                &.cart-discount {
+                    .woocommerce-remove-coupon {
+                        color: $primary;
+                        font-weight: 700;
+                        font-size: 13px;
+                    }
+                }
+
+                &.recurring-totals {
+                    border-bottom: none;
+                    th {
+                        color: $primary;
+                        font-weight: 700;
+                        font-size: 20px;
+                        padding-top: 20px;
+                    }
+                }
+
+                &.order-total {
+                    font-weight: 700;
+                    color: $text;
+                    td {
+                        font-size: 30px;
+                        strong {
+                            display: block;
+                            font-size: 30px;
+                            color: $text;
+                            font-weight: 700;
+                            .amount {
+                                color: $text;
+                            }
+                        }
+                        small {
+                            font-size: 12px;
+                        }
+                    }
+
+                    &.recurring-total {
+                        td {
+                            font-size: 14px;
+                            color: $text;
+                            font-weight: normal;
+                            strong {
+                                display: block;
+                                font-size: 30px;
+                                color: $text;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-checkout-payment {
+        padding: 24px 0 0;
+    }
+}

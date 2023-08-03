@@ -63,12 +63,6 @@
                 </div><!-- header__main -->
             </header><!-- header -->
 
-            <?php
-				AVB::avb_banners(array(
-					'is_page' => 'dashboard',
-					'is_page' => 'basket',
-					'is_search' => '',
-				));
-            ?>
+            <!--  -->
             
         </section><!-- header-banner -->

@@ -41,7 +41,10 @@
 
             //start the slider
             slideWrapper.slick({
+                autoplay: true,
                 autoplaySpeed: 5000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 lazyLoad: 'progressive',
                 speed: 600,
                 arrows: false,

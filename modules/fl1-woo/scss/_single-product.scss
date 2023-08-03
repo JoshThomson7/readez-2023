@@ -1,0 +1,406 @@
+/**
+ * Woo Single Product
+ *
+ * @package woocommerce/
+ * @version 1.0
+*/
+
+body.single-product {
+    header.header {
+        .header__main {
+            padding: 16px 0;
+        }
+    }
+}
+
+.wc-single-product {
+    position: relative;
+
+    &--nav {
+        border-top: 1px $border solid;
+        border-bottom: 1px $border solid;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        a {
+            display: flex;
+            align-self: center;
+            color: $text;
+            font-size: 13px;
+            i {
+                font-size: 11px;
+                position: relative;
+                top: 2px;
+                margin-right: 5px;
+            }
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .addthis_toolbox {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a {
+                margin: 0 3px;
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &--hero {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--gallery {
+        width: 40%;
+        padding: 30px 30px 30px 0;
+        @include breakpoint(papabear) {
+            width: 100%;
+            padding: 20px;
+            &:before {
+                display: block;
+                content: attr(data-title);
+                font-size: 41px;
+                font-weight: 700;
+                color: $text;
+                line-height: 50px;
+                margin-bottom: 20px;
+            }
+        }
+        @include breakpoint(mamabear) {
+            padding: 10px;
+        }
+
+        figure {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 32px;
+			max-height: 666px;
+			display: flex;
+			justify-content: center;
+
+            @include breakpoint(cousinbear) {
+                min-height: 450px;
+            }
+            @include breakpoint(mamabear) {
+                min-height: 350px;
+            }
+            @include breakpoint(sisterbear) {
+                min-height: 250px;
+            }
+
+            img { 
+                border-radius: 32px;
+				width: auto;
+    			display: block;
+            }
+        }
+    }
+	
+	&--buy { 
+		padding: var(--fl1-spacing-xl);
+		border: 1px var(--fl1-border) solid;
+		border-radius: var(--fl1-border-radius-xl);
+		margin-bottom: var(--fl1-spacing-xl);
+		background: #fff;
+	}
+
+	&--features { 
+		border-radius: var(--fl1-border-radius-l);
+		padding: var(--fl1-spacing-l) var(--fl1-spacing-xl);
+		background: lighten($primaryLight, 1%);
+		margin: var(--fl1-spacing-l) 0 0;
+
+		article { 
+			padding: var(--fl1-spacing-s) 0;
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+
+			strong {
+				font-weight: 700;
+				display: block;
+				max-width: 240px;
+				width: 100%;
+				padding-right: var(--fl1-spacing-l);
+			}
+
+			span { 
+				display: block;
+				flex: 1;
+			}
+		}
+	}
+
+    &--ad {
+        width: 60%;
+        padding: var(--fl1-spacing-xl) 0 var(--fl1-spacing-xl) var(--fl1-spacing-xl);
+        min-width: 335px;
+
+        @include breakpoint(papabear) {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-top: 1px $border solid;
+        }
+        @include breakpoint(teenbear) {
+            padding: 10px;
+        }
+
+        header {
+            h1 {
+                font-size: 32px;
+                font-weight: 700;
+                color: var(--fl1-text);
+                line-height: 44px;
+                @include breakpoint(teenbear) {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+
+            .wc-single-product--price {
+                margin-top: 16px;
+                .woocommerce-Price-amount {
+                    font-size: 24px;
+                    color: var(--fl1-primary);
+                }
+            }
+        }
+
+		@import "./single-product/add-to-cart";
+        
+    }
+
+    h6 { 
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--fl1-text);
+        margin-bottom: var(--fl1-spacing-m);
+    }
+
+    &--categories {
+        padding-top: var(--fl1-spacing-s);
+        
+        article { 
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--fl1-spacing-s);
+        }
+
+        a { 
+            display: block;
+            font-size: 11px;
+            color: var(--fl1-primary);
+            font-weight: 600;
+            background: lighten($primary, 50%);
+            border-radius: var(--fl1-border-radius-xl);
+            text-align: center;
+            padding: 4px var(--fl1-border-radius-s);
+            transform: scale(1);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transition: all 0.3s ease;
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    &--message {
+        margin: var(--fl1-spacing-m) 0;
+        padding: var(--fl1-spacing-l);
+        border-radius: var(--fl1-border-radius-s);
+        background: rgba(#D9F1FF, 0.9);
+
+        h5 { 
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--fl1-text);
+            margin-bottom: 8px;
+        }
+
+        p { 
+            font-size: 12px;
+            line-height: 1.5;
+
+            a { 
+                color: var(--fl1-secondary);
+                font-weight: 600;
+            }
+        }
+    }
+
+    &--content {
+		margin-bottom: var(--fl1-spacing-xl);
+		
+		p {
+			font-size: 18px;
+			line-height: 1.6;
+			&:first-of-type {
+				strong {
+					line-height: 1.5;
+					font-size: 24px;
+					color: var(--fl1-primary);
+				}
+			}
+
+			margin-bottom: var(--fl1-spacing-l);
+
+			a { 
+				color: var(--fl1-primary);
+				font-weight: 600;
+			}
+		}
+
+		ul, ol {
+			padding-left: var(--fl1-spacing-xl);
+			margin-bottom: var(--fl1-spacing-l);
+			li { 
+				font-size: 18px;
+				line-height: 1.5;
+			}
+		}
+
+		ul li { list-style-type: disc;}
+		ol li { list-style-type: decimal;}
+
+		.fc_accordion { 
+			background: #fff;
+			border-radius: var(--fl1-border-radius-m);
+
+			.accordion__wrap { 
+				border-bottom-color: var(--fl1-primary-light);
+				&:last-of-type { 
+					border-bottom: none;
+				}
+
+				h3.toggle { 
+					font-size: 18px;
+					line-height: normal;
+				}
+
+				.accordion__bg { 
+					border-radius: var(--fl1-border-radius-m);
+				}
+
+				ol.thinkific-course-lessons {
+					margin: 0;
+					li { 
+						font-size: 16px;
+						line-height: 1.5;
+						padding: 4px;
+
+						a { 
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							color: var(--fl1-text);
+							font-weight: 500;
+							border-radius: var(--fl1-border-radius-s);
+
+							&:hover {
+								background: var(--fl1-primary-light);
+								color: var(--fl1-primary);
+							}
+						}
+
+						figure { 
+							background: var(--fl1-primary);
+							border-radius: var(--fl1-border-radius-s);
+							font-size: 11px;
+							text-transform: uppercase;
+							font-weight: 700;
+							color: #fff;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							padding: 7px 8px 4px;
+						}
+					}
+				}
+			}
+		}
+    }
+
+    .wc-single-float {
+        display: none;
+        align-items: center;
+        background: rgba(white, 0.95);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 10px;
+        z-index: 999;
+        box-shadow: 0px -2px 6px rgba(black, 0.2);
+        text-transform: uppercase;
+        @include breakpoint(papabear) {
+            display: flex;
+        }
+
+        &-price {
+            font-size: 23px;
+            font-weight: 700;
+            del {
+                span {
+                    text-decoration: line-through;
+                    font-size: 16px;
+                    color: lighten($text, 20%);
+                    font-weight: normal;
+                }
+            }
+
+            ins {
+                text-decoration: none;
+            }
+
+            span {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 28px;
+                color: var(--fl1-text);
+                display: block;
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+        &-button {
+            margin-left: 20px;
+            a {
+                font-family: $primaryFont;
+                background: $quaternary;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 800;
+                padding: 12px 30px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                margin-left: auto;
+                min-width: 200px;
+                text-align: center;
+                text-transform: none;
+                @include breakpoint(sisterbear) {
+                    margin: 20px auto 0;
+                    min-width: 100%;
+                }
+
+                &:hover {
+                    background: lighten($quaternary, 3%);
+                    transition: all 0.4s ease;
+                    box-shadow: 0 3px 20px rgba(black, 0.1);
+                }
+            }
+        }
+    }
+}

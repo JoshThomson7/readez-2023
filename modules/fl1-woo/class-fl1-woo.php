@@ -49,7 +49,6 @@ class FL1_Woo {
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-helpers.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-public.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-user.php';
-        $deps[] = FL1_WOO_PATH. 'class-fl1-woo-product.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-cart.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-checkout.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-register.php';

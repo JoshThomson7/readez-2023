@@ -1,0 +1,27 @@
+/**
+ * Woo Styles
+ *
+ * @package woocommerce/
+ * @version 1.0
+*/
+
+@use "sass:math";
+
+@import '../../../scss/inc/vars';
+@import '../../../scss/inc/mixins';
+@import 'notices';
+@import 'table';
+@import 'single-product';
+@import 'cart';
+@import 'login-register';
+@import 'my-account';
+@import 'order';
+@import 'checkout/checkout';
+@import 'lost-password';
+
+.wc__wrapper { 
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}

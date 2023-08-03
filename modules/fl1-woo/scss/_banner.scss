@@ -1,0 +1,24 @@
+/**
+ * Woo Banner
+ *
+ * @package woocommerce/
+ * @version 1.0
+*/
+
+.wc__banner { min-height: 340px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2666a1+1,3793ef+100 */
+    background: rgb(38,102,161); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(38,102,161,1) 1%, rgba(55,147,239,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(38,102,161,1) 1%,rgba(55,147,239,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(38,102,161,1) 1%,rgba(55,147,239,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2666a1', endColorstr='#3793ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    .wc__banner__wrap { display: flex; justify-content: space-between; padding: 180px 0 40px;
+        .wc__banner__caption {
+            h1 { font-size:42px; color:#fff; font-weight: 900; padding:0 0 10px; line-height:54px;}
+
+            p { font-size:20px; color:#fff; line-height:28px; padding:10px 0;}
+        }
+    }
+}
