@@ -410,16 +410,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/img\/fl1-icon.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/img\/fl1-icon.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
     "\/img\/logo.png" : {
       "ft" : 32768,
       "iS" : 45134,
@@ -445,29 +435,6 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
-    },
-    "\/img\/pathways_lit-logo.jpg" : {
-      "ft" : 16384,
-      "iS" : 33989,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/pathways_lit-logo.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/img\/pw-parents-icon.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/img\/pw-parents-icon.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
     },
     "\/img\/select-arrow-down-white.png" : {
       "ft" : 32768,
@@ -540,39 +507,6 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/img\/svgs\/twitter.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/img\/tlc-logo-email.png" : {
-      "ft" : 32768,
-      "iS" : 7048,
-      "oA" : 0,
-      "oAP" : "\/img\/tlc-logo-email.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/img\/tlc-logo-white.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/img\/tlc-logo-white.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/img\/tlc-logo.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/img\/tlc-logo.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -2051,6 +1985,18 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/modules\/fl1-woo\/scss\/fl1-woo.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/modules\/fl1-woo\/scss\/fl1-woo-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/modules\/fl1-woo\/scss\/fl1-woo.scss" : {
       "aP" : 0,

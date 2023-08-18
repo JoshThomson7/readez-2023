@@ -28,7 +28,7 @@ $user = new TLC_User(get_current_user_id());
             <div class="header-left">
                 <figure class="logo tooltip">
                     <a href="<?php echo esc_url(home_url()); ?>">
-                        <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/tlc-logo.svg'); ?>" alt="<?php bloginfo('name'); ?>"/>
+                        <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" alt="<?php bloginfo('name'); ?>"/>
                     </a>
                 </figure>
 
