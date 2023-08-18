@@ -90,6 +90,10 @@ if(get_field('deal_payment_plan_length', $product->get_id())) {
                 <div class="wc-variation-quantity">
                     <input type="number" name="wc_variation_quantity" value="1" min="1" max="<?php echo $max_qty; ?>">
                 </div><!-- wc-variation-quantity -->
+
+                <div class="variation-price">
+                    £<?php echo $variation_price; ?>
+                </div>
             </label>
         </div><!-- wc-variation -->
     <?php $variation_count++; endforeach; ?>

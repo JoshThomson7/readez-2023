@@ -31,11 +31,12 @@
 
                     <a href="#nav_mobile" class="burger__menu"><span></span><span></span><span></span></a>
 
-                    <div class="logo">
+                    <!-- <div class="logo">
                         <a href="<?php echo esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>">
-                            <?php echo file_get_contents(FL1_PATH . '/img/tlc-logo.svg') ?>
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" alt="<?php bloginfo('name'); ?>"/>
                         </a>
-                    </div><!-- logo -->
+                    </div> -->
+                    <!-- logo -->
 
                 </div><!-- left -->
 
@@ -43,9 +44,9 @@
                     <div class="wc__cart">
                         <ul>
                             <li>
-                                <a href="<?php echo esc_url(home_url()); ?>" class="button primary border small icon-left">
+                                <a href="<?php echo wc_get_cart_url(); ?>" class="button primary border small icon-left">
                                     <i class="fa-regular fa-chevron-left"></i>
-                                    <span>Back to site</span>
+                                    <span>Back to basket</span>
                                 </a>
                             </li>
 

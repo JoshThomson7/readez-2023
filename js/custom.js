@@ -57,4 +57,24 @@ jQuery(function($) {
         },
     });
 
+    function updateCartTotal() {
+        $.ajax({
+            url: ajaxurl,
+            type: 'GET',
+            dataType: 'json',
+            data: { action: 'update_cart_total_with_vat' },
+            success: function(response) {
+                $('.cart-total-vat .total-amount').html(response.data.cart_total);
+            }
+        });
+    }
+
+    // Update the cart total on document load
+    updateCartTotal();
+
+    // Listen for changes to the cart through WooCommerce events
+    $(document).on('added_to_cart removed_from_cart', function() {
+        updateCartTotal();
+    });
+
 });

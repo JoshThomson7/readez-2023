@@ -46,14 +46,13 @@
             @include pretty-checkradio(label, "\f111", "\f058");
 
             label {
-                display: flex;
-                justify-content: space-between;
+                display: flex; 
+                justify-content: flex-start;
                 font-weight: 600;
-                .wc-variation--meta {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                    padding-right: 20px;
+                
+                .wc-variation-meta {
+                    width: 80px;
+                    padding-right: 40px;
                     color: var(--fl1-text);
 
                     span {
@@ -76,7 +75,7 @@
                     }
                 }
 
-                .wc-variation--quantity {
+                .wc-variation-quantity {
                     input {
                         background: $lightgrey;
                         font-size: 16px;
@@ -86,7 +85,12 @@
                         border: none;
                         border-radius: 3px;
                         text-align: center;
+                        font-family: $primaryFont;
                     }
+                }
+
+                .variation-price{
+                    padding-left: 40px; font-size: 18px;
                 }
             }
 
@@ -138,18 +142,21 @@
 
     .wc-add-to-cart--button {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
 		gap: var(--fl1-spacing-m);
         width: 100%;
+        flex-direction: column;
+
         @include breakpoint(sisterbear) {
-            flex-direction: column;
             align-items: center;
         }
 
 		.wc-single-product--price {
+            margin: 20px 0;
+
 			.woocommerce-Price-amount {
 				font-size: 24px;
-				color: var(--fl1-primary);
+				color: $baseFontColor;
 			}
 		}
 
@@ -175,6 +182,8 @@
                 background: lighten($primary, 3%);
                 transition: all 0.4s ease;
             }
+
+            i{padding-left: 10px;}
         }
 
         .wc-add-to-wishlist {

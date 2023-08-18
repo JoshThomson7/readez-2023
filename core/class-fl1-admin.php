@@ -147,15 +147,7 @@ class FL1_Admin {
 
         // Users that CAN edit ACF
         $admins = array(
-            'fl1digital',
-            'fl1admin',
-            'alex@fl1.digital',
-            'jason@fl1.digital',
-            'niall@fl1.digital',
-            'jose@fl1.digital',
-            'josh@fl1.digital',
-            'emily@fl1.digital',
-            'suzy@fl1.digital',
+            'dr@davidthomson.org',
         );
 
         $current_user = wp_get_current_user();

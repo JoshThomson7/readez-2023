@@ -555,28 +555,30 @@ body.single-product header.header .header__main {
   justify-content: flex-start;
   font-weight: 600;
 }
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation-meta {
-  width: 80px;
-  padding-right: 40px;
+.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation--meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
   color: var(--fl1-text);
 }
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation-meta span.price {
+.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation--meta span.price {
   display: block;
   font-weight: 700;
   color: #67BCE7;
 }
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation-meta span.subscription-details {
+.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation--meta span.subscription-details {
   font-weight: 400;
   color: #364954;
   font-size: 12px;
 }
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation-meta span.variation-description {
+.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation--meta span.variation-description {
   font-weight: 400;
   color: #364954;
   font-size: 12px;
   display: block;
 }
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation-quantity input {
+.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .wc-variation--quantity input {
   background: #eef0fb;
   font-size: 16px;
   color: var(--fl1-text);
@@ -585,11 +587,6 @@ body.single-product header.header .header__main {
   border: none;
   border-radius: 3px;
   text-align: center;
-  font-family: "Objectivity", sans-serif;
-}
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation label .variation-price {
-  padding-left: 40px;
-  font-size: 18px;
 }
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-variable .wc-variation.wc-out-of-stock label {
   opacity: 0.2;
@@ -635,22 +632,19 @@ body.single-product header.header .header__main {
 }
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--fl1-spacing-m);
   width: 100%;
-  flex-direction: column;
 }
 @media (max-width: 550px) {
   .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button {
+    flex-direction: column;
     align-items: center;
   }
 }
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .wc-single-product--price {
-  margin: 20px 0;
-}
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .wc-single-product--price .woocommerce-Price-amount {
   font-size: 24px;
-  color: #364954;
+  color: var(--fl1-primary);
 }
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .single_add_to_cart_button,
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .wc-add-to-cart-button {
@@ -677,10 +671,6 @@ body.single-product header.header .header__main {
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .wc-add-to-cart-button:hover {
   background: #74c2e9;
   transition: all 0.4s ease;
-}
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .single_add_to_cart_button i,
-.wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .wc-add-to-cart-button i {
-  padding-left: 10px;
 }
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-add-to-cart--button .wc-add-to-wishlist {
   display: flex;
@@ -1060,7 +1050,7 @@ body.woocommerce-cart .woocommerce .woocommerce-cart-form table.shop_table thead
   text-align: right;
 }
 body.woocommerce-cart .woocommerce .woocommerce-cart-form table.shop_table td {
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 body.woocommerce-cart .woocommerce .woocommerce-cart-form table.shop_table td.product-remove {
   width: 20px;
