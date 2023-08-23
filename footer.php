@@ -1,58 +1,31 @@
 	<?php do_action('before_footer'); ?>
 
-	<?php
-		$logos = get_field('footer_logos', 'option');
-	?>
-	<div class="flexible__content">
-		<section class="fc-layout fc_carousel_images">
-			<div class="fc-layout-container">
-				<div class="max__width">
-					<div class="carousel_images footer-logos">
-						<?php
-							foreach($logos as $logo):
-						?>
-							<div class="carousel_image">
-								<img src="<?php echo $logo['image']; ?>" />
-							</div><!--  -->
-						<?php endforeach; ?>
-					</div><!-- carousel_images -->
-				</div><!-- max__width -->
-			</div><!-- fc-layout-container -->
-		</section>
-	</div>
-
 	<footer role="contentinfo">
 		<div class="max__width">
 			<div class="footer__signup">
 				<div id="mc_embed_signup" class="footer__signup__form">
 					<h3>Stay up to date</h3>
 
-					<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://jr29.mjt.lu/wgt/jr29/np7/form?c=c837c14c" width="100%" style="height: 0;"></iframe>
+					<script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+
+					<!-- <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div class="form__row">
 							<div class="form__field">
 								<input type="email" value="" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL">
-							</div><!-- form__field -->
+							</div>
 
 							<div class="form__field submit">
 								<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Sign up</button>
-							</div><!-- form__field -->
-						</div><!-- form__row -->
-					</form>
+							</div>
+						</div>
+					</form> -->
 
 					<div class="form__row gdpr">
-						<small>We are GDPR compliant and respect your privacy. You can unsubscribe at any time.</small>
+						<small>We are GDPR compliant and respect your privacy. You can opt-out at any time after signing up.</small>
 					</div>
 				</div><!-- footer__signup__form -->
 
-				<div class="footer__social">
-					<ul>
-						<li>
-							<a href="https://www.instagram.com/theliteracycompany/" target="_blank">
-								<?php echo file_get_contents(FL1_PATH . '/img/svgs/instagram.svg'); ?>
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div><!-- footer__signup -->
 		</div>
 

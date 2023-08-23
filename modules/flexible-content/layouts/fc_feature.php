@@ -4,6 +4,8 @@
  */
 $attachment_id = get_sub_field('feature_image');
 $feature_text_width = '';
+$feature_image_gif = get_sub_field('feature_image_gif');
+$image_size = 'full';
 
 if($attachment_id) {
     $crop = get_sub_field('feature_image_crop') ?? false;
@@ -20,16 +22,28 @@ if($attachment_id) {
 
 	$expand = get_sub_field('feature_image_expand') ?? false;
 }
+
+if($feature_image_gif){
+    $feature_img = get_sub_field('feature_image');
+}
+
 ?>
 
 <div class="fc_feature_wrapper<?php echo $feature_img_align.($expand ? ' fc-feature-img-expand' : ''); ?>">
     <?php if($attachment_id): ?>
         <div class="feature__image">
-            <?php if($attachment_id): ?>
+            <?php if($attachment_id && !$feature_image_gif): ?>
 				<?php if($expand): ?>
 					<div class="feature__image-expand" style="background-image: url(<?php echo $feature_img['url']; ?>);"></div>
 				<?php endif; ?>
 				<img src="<?php echo $feature_img['url']; ?>" />
+            <?php endif; ?>
+
+            <?php if($feature_image_gif): ?>
+				<?php if($expand): ?>
+					<div class="feature__image-expand" style="background-image: url(<?php echo $feature_img['url']; ?>);"></div>
+				<?php endif; ?>
+				<?php echo wp_get_attachment_image($feature_img, $image_size); ?>
             <?php endif; ?>
         </div><!-- feature__image -->
     <?php endif; ?>

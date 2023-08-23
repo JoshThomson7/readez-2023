@@ -97,3 +97,40 @@
   }
 }
 
+// SHIPPING
+#calc_shipping_state_field, #calc_shipping_postcode_field, #calc_shipping_city_field{
+  input{
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    padding: 0 10px;
+    font-family: $primaryFont;
+
+    &::placeholder{color: black; font-family: $primaryFont; line-height: 28px;}
+  }
+}
+
+#calc_shipping_postcode_field{margin-bottom: 10px;}
+
+.shipping-calculator-form{margin-top: 20px; align-items: flex-end; display: flex; flex-direction: column;}
+
+.select2-container .select2-selection--single{margin: 0;}
+
+.select2-container .select2-selection--single .select2-selection__rendered{text-align: left!important;}
+
+// ROYAL MAIL OPTIONS
+#shipping_method{
+  li{margin-bottom: 15px; display: flex; align-items: flex-start;
+    input{margin: 0;}
+  }
+}

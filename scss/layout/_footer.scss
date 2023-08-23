@@ -19,10 +19,11 @@ footer {
 
     .footer__signup {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         border-bottom: 1px lighten(#fff, 10%) solid;
         padding: 32px 0;
+        text-align: center;
 
         @include breakpoint(grandpabear) {
             flex-direction: column;
@@ -33,14 +34,14 @@ footer {
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 22px;
             font-weight: 800;
             color: var(--fl1-white);
             margin-bottom: 16px;
         }
 
         &__form {
-            flex: 2;
+            //flex: 2;
 
             .form__row {
                 display: flex;
@@ -343,6 +344,8 @@ footer {
                 a {
                     color: var(--fl1-white);
                     font-size: 12px;
+
+                    &:hover{color: $primary;}
                 }
             }
         }

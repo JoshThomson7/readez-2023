@@ -63,10 +63,10 @@ class FL1_Woo_Cart {
     public function cart_is_empty() {
         $html = '<div class="wc__empty__basket">';
             $html .= '<div class="message"><figure><i class="fas fa-shopping-basket"></i></figure>';
-                $html .= '<p>'.wp_kses_post( apply_filters( 'wc_empty_cart_message', __( 'Your basket is currently empty. Why not check out the items below?', 'woocommerce' ) ) ).'</p>';
+                $html .= '<p>'.wp_kses_post( apply_filters( 'wc_empty_cart_message', __( 'Your basket is currently empty. Why not check out our products?', 'woocommerce' ) ) ).'</p>';
             $html .= '</div>';
             $html .= '<div class="wc__empty__basket--buttons">';
-                $html .= '<a href="'.esc_url(home_url()).'" class="button primary small icon-left"><i class="fa fa-chevron-left"></i><span>Back to '.get_bloginfo('name').'</span></a>';
+                $html .= '<a href="'.esc_url(home_url()).'/products'.'" class="button primary small icon-left"><i class="fa fa-chevron-left"></i><span>View Products</span></a>';
             $html .= '</div>';
         $html .= '</div>';
 
@@ -136,7 +136,7 @@ class FL1_Woo_Cart {
     }
 
     public function continue_shopping() {
-        echo '<div class="wc__continue__shopping"><a href="'.esc_url(home_url()).'">Continue shopping</a></div>';
+        echo '<div class="wc__continue__shopping"><a href="'.esc_url(home_url()).'/products'.'">Continue shopping</a></div>';
     }
 
     /**
