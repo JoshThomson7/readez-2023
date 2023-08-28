@@ -61,13 +61,14 @@ header.header {
 
         &--right {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-end;
 
             ul {
                 display: flex;
                 align-items: center;
 				gap: var(--fl1-spacing-sm);
+                @include breakpoint(500px){display: none;}
 
                 li {
                     display: flex;
@@ -90,17 +91,14 @@ header.header {
 
         .burger__menu {
             display: none;
-            margin-right: 5px;
+            margin-left: 30px;
             @include breakpoint(1060px) {
                 display: block;
             }
 
             i {
-                font-size: 30px;
+                font-size: 36px;
                 color: var(--fl1-primary);
-                @include breakpoint(teenbear) {
-                    font-size: 24px;
-                }
             }
         }
     }

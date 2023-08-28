@@ -73,6 +73,7 @@ section.avb {
 
 				.avb-banner__caption-wrap {
 					width: 40%;
+					@include breakpoint(1000px){width: 100%;}
 
 					figure {
 						margin-bottom: 20px;
@@ -97,7 +98,7 @@ section.avb {
 					line-height: 65px;
 					
 					@include breakpoint(brotherbear) {
-						font-size: 3rem;
+						font-size: 2rem;
 						line-height: 1.2;
 					}
 				}
@@ -122,8 +123,9 @@ section.avb {
 					}
 
 					@include breakpoint(brotherbear) {
-						font-size: var(--fl1-font-md);
+						font-size: 18px;
 						padding-right: 0;
+						line-height: 28px;
 					}
 				}
 
@@ -299,11 +301,12 @@ section.avb {
 		.slick-dots {
 			width: auto;
 			text-align: center;
-			bottom: 80px;
+			bottom: 30px;
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
 			z-index: 5;
+			padding: 0 20px;
 
 			@include breakpoint(cousinbear) {
 				bottom: 30px;
@@ -346,7 +349,7 @@ section.avb {
 						width: 13px;
 						height: 13px;
 						opacity: 1;
-						background: var(--fl1-lightgrey);
+						// background: var(--fl1-lightgrey);
 					}
 				}
 				&.slick-active {
@@ -371,6 +374,8 @@ section.avb {
 				left: 0;
 				justify-content: flex-start;
 				padding-left: calc((100vw - 1180px) / 2);
+				@include breakpoint(1000px){left: 20px; bottom: 0px;}
+				@include breakpoint(800px){left: 0;}
 
 				@include breakpoint(cousinbear) {
 					all: none;

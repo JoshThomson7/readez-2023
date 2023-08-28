@@ -123,8 +123,9 @@ Tabs
                 min-width: 250px;
                 @include breakpoint(brotherbear) {
                     max-width: 100%;
-                    padding-bottom: 50px;
+                    // padding-bottom: 50px;
                     min-width: auto;
+                    margin-bottom: 30px;
                 }
 
                 li {

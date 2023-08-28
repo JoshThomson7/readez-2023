@@ -4,6 +4,7 @@
 		width: 100%;
 		max-width: 260px;
 		margin: 0 15px 15px 15px;
+		display: none;
 		svg {
 			.st0 {
 				fill: #fff;
@@ -50,24 +51,19 @@
 	}
 
 	&.mm-menu {
-		background: linear-gradient(
-			150deg,
-			rgba(0, 21, 73, 1) 65%,
-			rgba(71, 32, 85, 1) 90%,
-			rgba(125, 48, 138, 1) 100%
-		);
+		background: $white; border-right: 1px solid $primary;
 
 		.mm-panel {
 			padding: 0;
 			.mm-navbar {
 				.mm-prev {
 					&:before {
-						border-color: var(--fl1-white);
+						border-color: $primary;
 						width: 11px;
 						height: 11px;
 					}
 					&:after {
-						border-color: var(--fl1-white);
+						border-color: $primary;
 						width: 11px;
 						height: 11px;
 					}
@@ -85,7 +81,7 @@
 			li {
 				margin-left: 20px;
 				a {
-					color: #fff !important;
+					color: $primary !important;
 					padding-left: 0 !important;
 					font-size: var(--fl1-font-sm);
 					font-weight: 700;
@@ -102,7 +98,7 @@
 
 					&.mm-prev {
 						&:before {
-							border-color: var(--fl1-white);
+							border-color: $primary;
 							width: 11px;
 							height: 11px;
 						}
@@ -110,7 +106,7 @@
 
 					&.mm-next {
 						&:after {
-							border-color: var(--fl1-white);
+							border-color: $primary;
 							width: 11px;
 							height: 11px;
 						}

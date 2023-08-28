@@ -5,7 +5,7 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 0 -1.5rem;
+	margin: 0;
 	
 	@include breakpoint(brotherbear) {
 		flex-direction: column;
@@ -34,6 +34,7 @@
 			border-radius: var(--fl1-spacing-lg);
 			gap: var(--fl1-spacing-md);
 			word-break: break-word;
+			@include breakpoint(900px){margin: 0;padding: 20px;}
 
 			h3 {
 				font-size: var(--fl1-font-lg);

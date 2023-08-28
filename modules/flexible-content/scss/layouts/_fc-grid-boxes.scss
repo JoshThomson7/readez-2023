@@ -7,7 +7,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 -16px;
+        // margin: 0 -16px;
 
         article {
             display: flex;
@@ -102,9 +102,8 @@
             &.full { width: 100%;}
             &.half { width: math.percentage(math.div(1,2));}
             &.one__third { width: math.percentage(math.div(1,3));
-                @include breakpoint(1000px){
-                    width: 50%;
-                }
+                @include breakpoint(1000px){width: 50%;}
+                @include breakpoint(700px){width: 100%;}
             }
             &.one__fourth { width: math.percentage(math.div(1,4));
                 @include breakpoint(teenbear){

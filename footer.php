@@ -31,7 +31,7 @@
 
 		<div class="footer__menus">
 			<div class="max__width">
-				<article>
+				<article class="footer__details">
 					<ul>
 						<li>
 							<i class="fa-light fa-location-dot"></i>
@@ -90,6 +90,7 @@
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>
+	
 	</body>
 
 	</html>

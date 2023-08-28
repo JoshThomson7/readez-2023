@@ -26,10 +26,6 @@
                 <div class="header__main">
                     <div class="max__width">
                         <div class="header__main--left">
-                            <a href="#nav_mobile" class="burger__menu">
-                                <i class="fal fa-bars"></i>
-                            </a>
-
                             <div class="logo">
                                 <a href="<?php echo esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>">
                                     <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" alt="<?php bloginfo('name'); ?>"/>
@@ -58,6 +54,10 @@
                                     </a>
                                 </li>        
                             </ul>
+
+                            <a href="#nav_mobile" class="burger__menu">
+                                <i class="fal fa-bars"></i>
+                            </a>
                         </div>
                     </div><!-- max__width -->
                 </div><!-- header__main -->
