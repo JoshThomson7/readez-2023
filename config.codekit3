@@ -1205,198 +1205,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/modules\/_blog\/acf-json\/group_63da949d32ef8.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/modules\/_blog\/acf-json\/group_63da949d32ef8-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/modules\/_blog\/assets\/css\/fl1-blog.min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/assets\/css\/fl1-blog.min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/modules\/_blog\/class-fl1-blog-helpers.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/class-fl1-blog-helpers.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/class-fl1-blog-module.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/class-fl1-blog-module.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/class-fl1-blog-public.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/class-fl1-blog-public.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/class-fl1-blog.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/class-fl1-blog.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/index.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/index.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/scss\/_blog.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/modules\/_blog\/scss\/_blog.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/modules\/_blog\/scss\/inc\/_blog-filters.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/modules\/_blog\/scss\/inc\/_blog-filters.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/modules\/_blog\/scss\/inc\/_blog-post.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/modules\/_blog\/scss\/inc\/_blog-post.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/modules\/_blog\/scss\/inc\/_blog-single.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/modules\/_blog\/scss\/inc\/_blog-single.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-archive-title.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-archive-title.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-archive.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-archive.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-featured.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-featured.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-filters.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-filters.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-item.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-item.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-loop.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-loop.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-single-title.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-single-title.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog-single.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog-single.php",
-      "oF" : 0
-    },
-    "\/modules\/_blog\/templates\/blog.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/_blog\/templates\/blog.php",
-      "oF" : 0
-    },
     "\/modules\/advanced-video-banners\/functions\/class-avb-banner-html-video.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -4006,6 +3814,18 @@
       "oA" : 0,
       "oAP" : "\/search.php",
       "oF" : 0
+    },
+    "\/style-base.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/style-base-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/style.css" : {
       "aP" : 1,

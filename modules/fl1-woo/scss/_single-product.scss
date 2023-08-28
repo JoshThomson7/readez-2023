@@ -342,9 +342,9 @@ body.single-product {
         z-index: 999;
         box-shadow: 0px -2px 6px rgba(black, 0.2);
         text-transform: uppercase;
-        @include breakpoint(papabear) {
-            display: flex;
-        }
+        // @include breakpoint(papabear) {
+        //     display: flex;
+        // }
 
         &-price {
             font-size: 23px;

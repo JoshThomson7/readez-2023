@@ -49,7 +49,7 @@ if(is_user_logged_in()) {
 			<div class="wc__login__register--form-content">
 
 				<figure>
-					<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/tlc-logo.svg" alt="<?php bloginfo('name'); ?>">
+					<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>">
 				</figure>
 
 				<div class="wc__is__user">
