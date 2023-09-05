@@ -19,13 +19,12 @@ $price = $product->get_regular_price();
     ?>
 
     <div class="wc-add-to-cart--button">
-        <button type="submit" class="wc-add-to-cart-button button">Add to basket</button>
         <?php
             if($product_type === 'simple') { 
                 require_once $product_type.'.php';
             }
         ?>
-
+        <button type="submit" class="wc-add-to-cart-button button">Add to basket</button>
     </div><!-- wc-qty-add-to-cart -->
 
     <div class="wc-continue">

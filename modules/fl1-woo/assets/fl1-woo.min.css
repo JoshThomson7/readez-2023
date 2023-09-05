@@ -467,6 +467,8 @@ body.single-product header.header .header__main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-simple h3 {
   font-size: 16px;
@@ -482,6 +484,11 @@ body.single-product header.header .header__main {
   border: none;
   border-radius: 3px;
   text-align: center;
+}
+.wc-single-product--ad .wc-single-product--add-to-cart .wc-simple .simple-price {
+  font-weight: 600;
+  padding-left: 40px;
+  font-size: 18px;
 }
 .wc-single-product--ad .wc-single-product--add-to-cart .wc-variable {
   width: 100%;
