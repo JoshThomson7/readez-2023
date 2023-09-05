@@ -410,6 +410,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/img\/ISO-Inverted.png" : {
+      "ft" : 32768,
+      "iS" : 28853,
+      "oA" : 0,
+      "oAP" : "\/img\/ISO-Inverted.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/img\/logo.png" : {
       "ft" : 32768,
       "iS" : 45134,

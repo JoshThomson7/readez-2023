@@ -31,19 +31,7 @@
 
 		<div class="footer__menus">
 			<div class="max__width">
-				<article class="footer__details">
-					<ul>
-						<li>
-							<i class="fa-light fa-location-dot"></i>
-							Read EZ<br>
-							131a Dixons Hill Road<br>
-							Herts<br>
-							AL9 7DW
-						</li>
-						<li><i class="fa-light fa-phone"></i> 01707 414 700</li>
-					</ul>
-				</article>
-
+				
 				<?php
 				while (have_rows('footer_menus', 'options')) : the_row();
 
@@ -57,6 +45,23 @@
 					</article>
 
 				<?php endwhile; ?>
+
+				<article class="footer__details">
+					<ul>
+						<li>
+							<i class="fa-light fa-location-dot"></i>
+							Read EZ<br>
+							131a Dixons Hill Road<br>
+							Herts<br>
+							AL9 7DW
+						</li>
+						<li><i class="fa-light fa-phone"></i> 01707 414 700</li>
+					</ul>
+				</article>
+
+				<article class="footer__details">
+					<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/ISO-Inverted.png'); ?>" alt="<?php bloginfo('name'); ?>"/>
+				</article>
 			</div>
 		</div>
 
