@@ -87,7 +87,6 @@ $chapters = $product->thinkific_chapters() ?? array();
 				<div class="wc-single-product--content">
 					<?php echo apply_filters('the_content', $product->get_short_description()); ?>
 					<?php echo apply_filters('the_content', $product->get_description()); ?>
-					<?php include 'single-product-thinkific.php'; ?>
 				</div>
 
                 <!-- <div class="wc-single-product--message">

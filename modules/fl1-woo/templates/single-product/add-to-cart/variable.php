@@ -16,10 +16,6 @@ foreach($attributes[0] as $key => $value) {
     $the_attribute = $attributes[0][$key]['name'];
 }
 
-$payment_plan_months = '';
-if(get_field('deal_payment_plan_length', $product->get_id())) {
-    $payment_plan_months = 'per month for '.get_field('deal_payment_plan_length', $product->get_id()).' months.';
-}
 ?>
 
 <div class="wc-variable">
@@ -79,12 +75,11 @@ if(get_field('deal_payment_plan_length', $product->get_id())) {
             data-variation-qty="1"
             data-variation-name="<?php echo $attribute_name; ?>"
             data-variation-slug="<?php echo $attribute_slug; ?>"
-            data-variation-price="<?php echo $variation_price; ?>"
-            <?php echo $child_tickets_only_data.$payment_plan_data; ?>>
+            data-variation-price="<?php echo $variation_price; ?>">
 
             <label for="<?php echo $value['variation_id']; ?>">
                 <div class="wc-variation-meta">
-                    <h5><?php echo $attribute_name;?><?php echo $variation_price_html.$variation_description;?></h5>
+                    <h5><?php echo $attribute_name;?><?php echo $variation_description;?></h5>
                 </div><!-- wc-variation-meta -->
 
                 <div class="wc-variation-quantity">

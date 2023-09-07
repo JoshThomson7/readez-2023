@@ -150,9 +150,9 @@ class FL1_Woo_Cart {
         
         if ( $_product->is_type( 'variation' ) ) {
             if ( ! $product_permalink ) {
-                return sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), trunc($_product->get_title(), 15 ));
+                return sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title());
             } else {
-                return sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), trunc($_product->get_title(), 15 ));
+                return sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title());
             }
         }
 

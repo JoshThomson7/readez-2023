@@ -7,7 +7,7 @@
       "uuidString" : "E3A06CD2-C4DD-478B-B0DB-996D30A81E10"
     }
   ],
-  "creatorBuild" : "34510",
+  "creatorBuild" : "34518",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -1991,14 +1991,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/modules\/fl1-woo\/templates\/single-product\/single-product-hero.php",
-      "oF" : 0
-    },
-    "\/modules\/fl1-woo\/templates\/single-product\/single-product-thinkific.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/modules\/fl1-woo\/templates\/single-product\/single-product-thinkific.php",
       "oF" : 0
     },
     "\/modules\/fl1-woo\/templates\/single-product\/single-product.php" : {
@@ -4810,9 +4802,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0

@@ -53,26 +53,7 @@ $price_html = $product->get_price_html();
                     <div class="wc-single-product--content">
 					    <?php echo apply_filters('the_content', $product->get_short_description()); ?>
 					    <?php echo apply_filters('the_content', $product->get_description()); ?>
-					    <?php include 'single-product-thinkific.php'; ?>
 				    </div>
-					
-					<div class="wc-single-product--swatches">
-						<?php
-							$count = 1;
-							foreach($product_imgs as $product_img):
-								if(!$product_img['swatch']) { continue; }
-									
-								$swatch_img_id = $product_img['swatch'];
-								$wc_swatch_image = vt_resize($swatch_img_id,'' , 400, 400, false);
-						?>
-							<article data-slide="<?php echo $count; ?>" data-img-id="<?php echo $product_img['image']; ?>" class="<?php echo $count == 1 ? 'active' : ''; ?>">
-								<figure data-thumb="<?php echo $wc_swatch_image['url']; ?>">
-									<img src="<?php echo $wc_swatch_image['url']; ?>" alt="">
-								</figure>
-								<span><?php echo $product_img['caption']; ?></span>
-							</article>
-						<?php $count++; endforeach; ?>
-					</div>
 
                     <div class="wc-single-product--add-to-cart">
 						<?php require_once 'add-to-cart/add-to-cart.php'; ?>

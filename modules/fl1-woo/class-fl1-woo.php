@@ -53,7 +53,7 @@ class FL1_Woo {
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-checkout.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-register.php';
         $deps[] = FL1_WOO_PATH. 'class-fl1-woo-account.php';
-        $deps[] = FL1_WOO_PATH. 'class-fl1-woo-single-product.php';
+        // $deps[] = FL1_WOO_PATH. 'class-fl1-woo-single-product.php';
 
         return $deps;
 
@@ -66,7 +66,7 @@ class FL1_Woo {
         new FL1_Woo_Checkout();
         new FL1_Woo_Register();
         new FL1_Woo_Account();
-        new FL1_Woo_Single_Product();
+        // new FL1_Woo_Single_Product();
         
     }
 

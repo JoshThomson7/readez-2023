@@ -208,12 +208,13 @@
 
     // Account login form (force login)
     .woocommerce-account-fields {
+        display: none;
         margin-bottom: 40px;
         border: none;
         background: linear-gradient(150deg, rgba(0,21,73,1) 65%, rgba(71,32,85,1) 90%, rgba(125,48,138,1) 100%);
         padding: 32px;
         border-radius: var(--fl1-border-radius-m);
-        &:before {
+        &:before { 
             content: "Create an account";
             display: block;
             font-size: 22px;
