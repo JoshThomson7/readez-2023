@@ -42,7 +42,7 @@ if($images):
         ?>
             <li data-src="<?php echo $gallery_img_org['url']; ?>" class="<?php echo $items; ?>">
                 <a href="#" title=""><img src="<?php echo $gallery_img['url']; ?>" /></a>
-                <?php if($gallery_captions): ?>
+                <?php if($image_caption): ?>
                     <p style="text-align: center; margin-top: 10px;"><?php echo $image_caption; ?></p>
                 <?php endif; ?>
             </li>
