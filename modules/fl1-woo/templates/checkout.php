@@ -58,15 +58,6 @@
                                     </a>
                                 </li><!-- wc__header__cart -->
                             <?php endif; ?>
-
-                            <?php if(is_wc_endpoint_url('order-received') && is_user_logged_in()): ?>
-                                <li>
-                                    <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="button primary small icon-right">
-                                        <span>Portal</span>
-                                        <i class="fa fa-chevron-right"></i>
-                                    </a>
-                                </li><!-- wc__header__cart -->
-                            <?php endif; ?>
                         </ul>
                     </div><!-- wc__cart -->
                 </div><!-- right -->
