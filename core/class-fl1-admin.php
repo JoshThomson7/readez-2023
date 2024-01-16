@@ -148,6 +148,8 @@ class FL1_Admin {
         // Users that CAN edit ACF
         $admins = array(
             'dr@davidthomson.org',
+            'TWS',
+
         );
 
         $current_user = wp_get_current_user();
