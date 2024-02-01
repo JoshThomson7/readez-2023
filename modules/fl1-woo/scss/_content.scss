@@ -5,7 +5,7 @@
  * @version 1.0
 */
 
-.wc__content { padding: 0; width: 100%;
+.wc__content { padding: 0; width: 100%; 
     @include breakpoint(grandpabear) { width: 100%;}
 
     .wc__filters { display: none; margin-bottom: 40px;
