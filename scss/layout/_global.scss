@@ -22,8 +22,8 @@ body {
 			height: 100%;
 			top: 0;
 			left: 0;
-			clip-path: ellipse(1700px 100% at calc((100vw - 1900px) / 2) 0%);
-			background: #fff;
+			// clip-path: ellipse(1700px 100% at calc((100vw - 1900px) / 2) 0%);
+			background: #fff; 
 			z-index: 0;
 
 			@include breakpoint(600px) {
